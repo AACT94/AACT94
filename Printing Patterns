@@ -12,12 +12,13 @@ namespace SwitchStatement
 			int columns = Convert.ToInt32(Console.ReadLine());
 			Console.WriteLine("\nWhat symbol do you want to convert?");
 			char symbol = Convert.ToChar(Console.ReadLine());
-			pattern1(rows, columns, symbol);
+			Pattern1(rows, columns, symbol);
+			Pattern2(rows, columns);
 		}
 
-		public static void pattern1(int rows, int columns, char symbol)
+		public static void Pattern1(int rows, int columns, char symbol)
 		{
-			Console.Clear();
+			Console.WriteLine();
 			for (int i = 0; i < rows; i++)
 			{
 				for (int j = 0; j < columns; j++)
@@ -28,5 +29,18 @@ namespace SwitchStatement
 				Console.WriteLine();
 			}
 		}
+		
+		public static void Pattern2 (int rows, int columns)
+		{
+			Console.WriteLine();
+			for (int j=0;j<rows;j++)
+			{
+				for (int i=0;i<columns;i++)
+				{
+					Console.Write(i+1);
+				}
+			Console.WriteLine();
+		}
+	}	
 	}
 }
